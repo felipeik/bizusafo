@@ -13,7 +13,7 @@
         one: Usuário
         other: Usuários
       story:
-        one: Bizu
+        one: Notícia
       comment:
         zero: Não houve comentários
         one: Comentário
