@@ -1,7 +1,6 @@
 <% content_for :head do %>
-  <meta property="og:title" content="LifeNews" />
-  <meta property="og:description" content="<%= @story.description %>" />
-  <meta property="og:image" content="" />
+  <meta property="og:title" content="<%= @story.description %>" />
+  <meta property="og:description" content="Link compartilhado via LifeNews!" />
 <% end %>
 
 <%= render "story", story: @story, show_comments: true %>
