@@ -8,7 +8,7 @@
       default: ! '%d/%m/%Y - %H:%M'
 
   story:
-    no_story: "Nenhum Bizuuu aqui!"
+    no_story: "Nenhuma notícia encontrada..."
 
   activerecord:
     models:
