@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col-md-8">
     <%= form_for @story, html: {class: "form-signin"} do |f| %>
-      <legend>Editar Bizu!</legend>
+      <legend>Editar Notícia</legend>
       
       <%= render partial: "form", locals: {f: f, story: @story} %>
 
-      <button type="submit" class="btn btn-primary">Salvar Bizuuuu!</button>
-      <%= link_to "Apagar Bizuuuu!", @story, class: "btn btn-danger", method: :delete, data: { confirm: "Tem certeza que deseja apagar?" } %>
+      <button type="submit" class="btn btn-primary">Salvar Notícia</button>
+      <%= link_to "Apagar Notícia", @story, class: "btn btn-danger", method: :delete, data: { confirm: "Tem certeza que deseja apagar esta notícia?" } %>
     <% end %>
   </div>
 </div>
