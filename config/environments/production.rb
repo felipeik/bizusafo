@@ -85,10 +85,10 @@ Bizusafo::Application.configure do
     :authentication => :plain,
     :user_name      => ENV['SENDGRID_USERNAME'],
     :password       => ENV['SENDGRID_PASSWORD'],
-    :domain         => 'heroku.com',
+    :domain         => 'saudediario.com.br',
     :enable_starttls_auto => true
   }
   config.action_mailer.delivery_method = :smtp
 
-  config.action_mailer.default_url_options = { :host => 'lifenews.com.br' }
+  config.action_mailer.default_url_options = { :host => 'saudediario.com.br' }
 end
