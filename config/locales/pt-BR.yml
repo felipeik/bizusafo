@@ -9,6 +9,11 @@
 
   story:
     no_story: "Nenhuma notícia encontrada..."
+    sample_tags: "ex: dieta, fruta, remedios naturais"
+    sample_description: "ex: As propriedades milagrosas do limão"
+    sample_url: "ex: http://globo.com/noticias/2011/limao.html"
+    cant_rate_on_own_story: "Você não pode votar no seu próprio link!"
+    cant_rate_again: "Você já votou neste link."
 
   activerecord:
     models:

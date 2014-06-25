@@ -2,9 +2,13 @@
 <div class="form-group">
   <%= f.label :url, "URL" %>
   <span>- Não esqueça do http</span>
-  <%= f.text_field :url, class: "form-control", placeholder: "ex: http://globo.com/noticias/2011/limao.html", disabled: disabled_field(story) %>
+  <%= f.text_field :url, class: "form-control", placeholder: t("story.sample_url"), disabled: disabled_field(story), autofocus: true %>
 </div>
 <div class="form-group">
   <%= f.label :description, "Descrição" %>
-  <%= f.text_area :description, rows: 7, cols: 15, class: "form-control", placeholder: "ex: As propriedades milagrosas do limão" %>
+  <%= f.text_area :description, rows: 7, cols: 15, class: "form-control", placeholder: t("story.sample_description") %>
+</div>
+<div class="form-group">
+  <%= f.label :tag_list, "Tags" %>
+  <%= f.text_field :tag_list, rows: 7, cols: 15, class: "form-control", placeholder: t("story.sample_tags") %>
 </div>
