@@ -13,7 +13,7 @@
       default: ! '%d/%m/%Y - %H:%M'
 
   story:
-    no_story: "Nenhuma notícia encontrada..."
+    no_story: "Nenhum artigo encontrado..."
     sample_tags: "ex: dieta, fruta, remedios naturais"
     sample_description: "ex: As propriedades milagrosas do limão"
     sample_url: "ex: http://globo.com/noticias/2011/limao.html"
@@ -26,7 +26,7 @@
         one: Usuário
         other: Usuários
       story:
-        one: Notícia
+        one: Artigo
       comment:
         zero: Não houve comentários
         one: Comentário

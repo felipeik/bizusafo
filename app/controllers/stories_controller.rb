@@ -17,7 +17,7 @@ class StoriesController < ApplicationController
     @story.comments.first.author = current_user if @story.comments.present?
 
     if @story.save
-      redirect_to root_path, :notice => "Notícia criada com sucesso!"
+      redirect_to root_path, :notice => "Artigo criado com sucesso!"
     else
       @story.comments.build if @story.comments.blank?
       render :new
@@ -32,7 +32,7 @@ class StoriesController < ApplicationController
     @story = current_user.stories.find(params[:id])
 
     if @story.update_attributes story_params
-      redirect_to root_path, :notice => "Notícia salva com sucesso!"
+      redirect_to root_path, :notice => "Artigo salvo com sucesso!"
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class StoriesController < ApplicationController
     @story = current_user.stories.find(params[:id])
     @story.destroy
 
-    redirect_to root_path, :notice => "Notícia excluida com sucesso!"
+    redirect_to root_path, :notice => "Artigo excluido com sucesso!"
   end
 
   def positive
