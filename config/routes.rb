@@ -8,5 +8,7 @@ Bizusafo::Application.routes.draw do
 
   resources :comments
 
+  get "/:page_name", to: "home#page", as: :page
+
   root "home#index"
 end

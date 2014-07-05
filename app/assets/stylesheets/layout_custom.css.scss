@@ -1,3 +1,12 @@
 body {
   background: image-url("background.png");
 }
+
+.page-container {
+  background: white;
+  padding: 40px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px #ccc;
+}
