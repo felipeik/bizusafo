@@ -15,6 +15,7 @@ gem 'devise'
 gem 'kaminari'
 gem 'omniauth-facebook'
 gem 'acts-as-taggable-on'
+gem 'mailchimp-api', '~> 2.0.5', require: 'mailchimp'
 
 group :development, :test do
   gem 'rspec-rails' # needs to be a dev dep to enable rake tasks

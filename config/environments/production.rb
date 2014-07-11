@@ -91,4 +91,8 @@ Bizusafo::Application.configure do
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.default_url_options = { :host => 'saudediario.com.br' }
+
+
+  MAILCHIMP_API_KEY = ENV['MAILCHIMP_API_KEY']
+  MAILCHIMP_LIST_ID = ENV['MAILCHIMP_LIST_ID']
 end

@@ -12,6 +12,8 @@ class User < ActiveRecord::Base
   has_many :ratings
   has_many :comments, :foreign_key => 'author_id'
 
+  after_create :subscribe_to_email_marketing
+
   def self.find_or_create_for_facebook_oauth(auth)
     user = where(auth.info.slice(:email)).first_or_create do |user|
       user.provider = auth.provider
@@ -33,6 +35,10 @@ class User < ActiveRecord::Base
         user.email = data["email"] if user.email.blank?
       end
     end
+  end
+
+  def subscribe_to_email_marketing
+    EmailMarketingProvider.new.subscribe!(self)
   end
 
   private
