@@ -28,6 +28,11 @@
         </div>
       </section>
       
+      <section>
+        <center>
+          <%= link_to image_tag("sign_in_with_facbook.png"), user_omniauth_authorize_path(:facebook) %>
+        </center>
+      </section>
       <hr />
 
       <section>
@@ -71,6 +76,14 @@
         <script>
           $("#email").html("<a href='mailto:contato@saudediario.com.br' target='_blank'>contato@saudediario.com.br</a>");
         </script>
+      </section>
+
+      <hr />
+
+      <section>
+        <center>
+          <%= link_to image_tag("sign_in_with_facbook.png"), user_omniauth_authorize_path(:facebook) %>
+        </center>
       </section>
     </div>
   </div>
