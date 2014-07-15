@@ -28,5 +28,7 @@ module Bizusafo
     config.i18n.default_locale = :"pt-BR"
 
     config.serve_static_assets = true
+
+    config.assets.paths << "#{Rails}/assets/fonts"
   end
 end
