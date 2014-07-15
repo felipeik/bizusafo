@@ -2,6 +2,13 @@
   background: white;
   border-top: 1px solid #e0e0e0;
 
+  h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
   & > .container {
     margin-top: 20px;
   }
@@ -9,6 +16,10 @@
   ul, li {
     padding: 0px;
     display: block;
+  }
+
+  li {
+    margin-top: 10px;
   }
 
   li span.glyphicon {

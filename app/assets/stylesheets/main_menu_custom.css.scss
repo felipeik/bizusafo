@@ -1,8 +1,5 @@
 #main-menu {
-  z-index: 1;
-  position: absolute;
-  top: 161px;
-  left: 0px;
+  margin-top: -59px;
   width: 100%;
   background-color: rgba(0,0,0,0.4);
 
@@ -28,5 +25,25 @@
   .menu-icon {
     height: 18px;
   }
+}
 
+#mobile-main-menu {
+  margin-top: -21px;
+  width: 100%;
+  background-color: #111;
+  border: 0px;
+
+  a {
+    color: white;
+  }
+
+  a span {
+    margin-right: 10px;
+  }
+
+  li:hover {
+    background: #ccc;
+
+    a { color: #333; }
+  }
 }
