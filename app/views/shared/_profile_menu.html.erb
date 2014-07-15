@@ -1,19 +1,23 @@
-<section>
+<section id="profile-info">
   <div class="row">
-    <div class="col-md-1">
-      <p><%= image_tag avatar_url(current_user), class: "user-photo" %></p>
+    <div class="col-md-12">
+      <article>
+        <%= image_tag avatar_url(current_user), class: "user-photo" %>
+      </article>
+
+      <article>
+        <p>
+          <strong><%= t("activerecord.attributes.user.username") %>:</strong>
+          <%= current_user.username %>
+        </p>
+        <p>
+          <strong>Email:</strong>
+          <%= current_user.email %>
+        </p>
+        <p>
+          <strong><%= current_user.stories.count %> artigos compartilhados</strong>
+        </p>
+      </article>
     </div>
-    <div class="col-md-11">
-      <p>
-        <strong>Username:</strong>
-        <%= current_user.username %>
-      </p>
-      <p>
-        <strong>Email:</strong>
-        <%= current_user.email %>
-      </p>
-      <p>
-        <strong><%= current_user.stories.count %> artigos compartilhados</strong>
-      </p>
-    </div>
+  </div>
 </section>
