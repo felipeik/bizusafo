@@ -6,7 +6,8 @@
       
       <% if user_signed_in? %>
         <%= link_to "Compartilhar Artigo", new_story_path %>
-        <%= link_to "Meu Perfil", edit_user_registration_path %>
+        <%= link_to "Perfil", profile_path, class: "btn btn-default" %>
+        <%= link_to "Editar Perfil", edit_user_registration_path %>
         <%= link_to "Sair", destroy_user_session_path, :method => :delete %>
       <% else %>
         <%= link_to "Entrar", new_user_session_path %>

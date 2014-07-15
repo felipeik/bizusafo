@@ -31,4 +31,8 @@ Bizusafo::Application.configure do
 
   MAILCHIMP_API_KEY = ENV['MAILCHIMP_API_KEY']
   MAILCHIMP_LIST_ID = ENV['MAILCHIMP_LIST_ID']
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
+  config.action_mailer.default_options = { :from => "development@bizusafo.com.br" }
 end
