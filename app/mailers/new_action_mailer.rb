@@ -1,5 +1,5 @@
 class NewActionMailer < ActionMailer::Base
-  default from: "nao-responda@bizusafo.com.br"
+  default from: "nao-responda@saudediario.com.br"
 
   def new_rating(rater, story, recipient)
     @rater = rater
@@ -24,6 +24,6 @@ class NewActionMailer < ActionMailer::Base
     @comment = comment
     @recipients = recipients
 
-    mail(to: "nao_responda@bizusafo.com.br", bcc: @recipients, subject: I18n.t("notifications.new_comment_followed_story.subject"))
+    mail(to: "nao_responda@saudediario.com.br", bcc: @recipients, subject: I18n.t("notifications.new_comment_followed_story.subject"))
   end
 end
