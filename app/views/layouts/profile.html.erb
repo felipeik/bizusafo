@@ -16,18 +16,14 @@
 <%= render "shared/facebook_api" %>
 
 <div id="wrapper">
-  <div class="container">
-    <%= render "shared/header" %>
+  <%= render "shared/header" %>
 
+  <%= render "shared/main_menu" %>
 
-    <%= render "shared/main_menu" %>
-
-
-    <div id="content">
-      <%= render "shared/profile_menu" %>
-      <%= render "shared/flash_messages" %>
-      <%= yield %>
-    </div>
+  <div id="content" class="container">
+    <%= render "shared/profile_menu" %>
+    <%= render "shared/flash_messages" %>
+    <%= yield %>
   </div>
 
   <%= render "shared/footer" %>
