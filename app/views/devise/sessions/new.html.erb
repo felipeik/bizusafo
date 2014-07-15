@@ -1,7 +1,14 @@
 <div class="row">
   <div class="col-md-6">
+    <legend>Acesse com o Facebook</legend>
+    <%= link_to image_tag("sign_in_with_facbook.png"), user_omniauth_authorize_path(:facebook) %>
+  </div>
+</div>
+<hr />
+<div class="row">
+  <div class="col-md-6">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "form-signin"}) do |f| %>
-      <legend>Entrar</legend>
+      <legend>Ou... entrar com usuário e senha</legend>
       <div class="form-group">
         <%= f.label :email %><br />
         <%= f.email_field :email, class: "form-control", required: true, autofocus: true %>
@@ -20,10 +27,5 @@
       <br/>
       <%= render "devise/shared/links" %>
     <% end %>
-  </div>
-
-  <div class="col-md-6">
-    <legend>Ou... Acesse com o Facebook!</legend>
-    <%= link_to image_tag("sign_in_with_facbook.png"), user_omniauth_authorize_path(:facebook) %>
   </div>
 </div>

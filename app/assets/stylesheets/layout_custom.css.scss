@@ -1,3 +1,34 @@
+html, body {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  min-height:100%;
+  position:relative;
+}
+
+#wrapper {
+  min-height:100%;
+  position:relative;
+}
+
+#wrapper > .container {
+  padding-bottom: 210px; /* Min Height of the footer element */
+}
+
+#content {
+  margin-top: 220px;
+}
+
+#wrapper > footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 150px;
+}
+
 body {
   background: image-url("background.png");
 }

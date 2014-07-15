@@ -1,0 +1,39 @@
+<footer>
+  <div class="container">
+    <nav>
+      <ul>
+        <li>
+          <span class="glyphicon glyphicon-home"></span>
+          <%= link_to "Início", root_path %>
+        </li>
+        <li>
+          <span class="glyphicon glyphicon-info-sign"></span>
+          <%= link_to "Sobre", page_path(page_name: "sobre") %>
+        </li>
+        <% if user_signed_in? %>
+          <li>
+            <span class="glyphicon glyphicon-plus-sign"></span>
+            <%= link_to "Novo Artigo", new_story_path %>
+          </li>
+          <li>
+            <span class="glyphicon glyphicon-user"></span>
+            <%= link_to "Perfil", profile_path %>
+          </li>
+          <li>
+            <span class="glyphicon glyphicon-edit"></span>
+            <%= link_to "Editar Perfil", edit_user_registration_path %>
+          </li>
+        <% else %>
+          <li>
+            <span class="glyphicon glyphicon-log-in"></span>
+            <%= link_to "Entrar", new_user_session_path %>
+          </li>
+          <li>
+            <span class="glyphicon glyphicon-plus"></span>
+            <%= link_to "Registrar", new_user_registration_path %>
+          </li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</footer>

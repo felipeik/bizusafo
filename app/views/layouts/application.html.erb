@@ -15,17 +15,22 @@
 <body>
 <%= render "shared/facebook_api" %>
 
-<div class="container">
-  <%= render "shared/header" %>
+<div id="wrapper">
+  <div class="container">
+    <%= render "shared/header" %>
 
-  <%= render "shared/flash_messages" %>
+    <%= render "shared/main_menu" %>
 
-  <%= render "shared/main_menu" %>
+    <div id="content">
+      <%= render "shared/flash_messages" %>
 
-  <%= yield %>
+      <%= yield %>
+    </div>
+  </div>
 
-  <%= render "shared/google_analytics" %>
+  <%= render "shared/footer" %>
 </div>
+<%= render "shared/google_analytics" %>
 
 </body>
 </html>
