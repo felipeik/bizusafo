@@ -1,8 +1,5 @@
 <% if show_comments %>
   <hr>
-  <div class="comments-container">
-    <%= render partial: "stories/comment", collection: story.comments %>
-  </div>
   <% if current_user %>
     <div class="new-comment-container">
       <%= form_for Comment.new do |f| %>
@@ -14,5 +11,12 @@
         <button type="submit" class="btn btn-primary">Comentar</button>
       <% end %>
     </div>
+  <% else %>
+    <p>
+      Para comentar, <%= link_to "entre aqui", new_user_session_path %> ou <%= link_to image_tag("sign_in_with_facbook.png"), user_omniauth_authorize_path(:facebook) %>
+    </p>
   <% end %>
+  <div class="comments-container">
+    <%= render partial: "stories/comment", collection: story.comments %>
+  </div>
 <% end %>

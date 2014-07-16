@@ -6,6 +6,8 @@ class Comment < ActiveRecord::Base
 
   delegate :username, to: :author, allow_nil: true
 
+  default_scope { order("created_at desc") }
+
   def self.add_comment!(params)
     comment = create(params)
     notify_comment!(comment) if comment.persisted?
